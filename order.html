@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WowFood Admin</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+	<div class="header">
+		<label class="header-label">Welcome, Admin</label>
+		<button class="logout">Logout</button>
+	</div>
+
+	<div class="under-header">
+		<div class="nav">
+			<div class="profile">
+				<img src="images/customer2.jpg" alt="Admin Profile Picture">
+				<p class="profile-name">Admin Name</p>
+			</div>
+			<ul>
+				<li><a href="index.html"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+				<li><a href="category.html"><i class='bx bxs-category'></i> Category</a></li>
+				<li><a href="food.html"><i class='bx bxs-food-menu'></i> Food</a></li>
+				<li><a href="order.html"><i class='bx bxs-cart'></i> Order</a></li>
+				<li><a href="book-table.html"><i class='bx bxs-calendar'></i> Book Table</a></li>
+			</ul>
+		</div>
+		<div class="panel">
+			    <h3>Manage Order</h3>
+			    
+			    <table class="order-table">
+			        <thead>
+			            <tr>
+			                <th>Food Name</th>
+			                <th>Price</th>
+			                <th>Qty</th>
+			                <th>Total</th>
+			                <th>Order Date</th>
+			                <th>Name</th>
+			                <th>Contact</th>
+			                <th>Email</th>
+			                <th>Address</th>
+			                <th>Action</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			            <tr>
+			                <td>Rice</td>
+			                
+			                <td>$ 4.00</td>
+			                <td>5</td>
+			                <td>$ 20.00</td>
+			                <td>2024-08-13</td>
+			                <td>Ayodhya Sankalpa</td>
+			                <td>0112406315</td>
+			                <td>example@gmail.com</td>
+			                <td>155/8, Giridara Rd, USA</td>
+			                <td>
+			                    <button class="edit-btn">Edit</button>
+			                    <button class="delete-btn">Delete</button>
+			                </td>
+			            </tr>
+			           			            <!-- Add more rows as needed -->
+			        </tbody>
+			    </table>
+			</div>
+
+	</div>
+
+
+
+<script src="js/admin.js"></script>
+</body>
+</html>

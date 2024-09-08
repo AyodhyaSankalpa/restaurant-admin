@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Table - WowFood Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="header">
+        <label class="header-label">Book Table</label>
+        <button class="logout">Logout</button>
+    </div>
+
+    <div class="under-header">
+        <div class="nav">
+            <div class="profile">
+                <img src="images/customer2.jpg" alt="Admin Profile Picture">
+                <p class="profile-name">Admin Name</p>
+            </div>
+            <ul>
+                <li><a href="index.html"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+                <li><a href="category.html"><i class='bx bxs-category'></i> Category</a></li>
+                <li><a href="food.html"><i class='bx bxs-food-menu'></i> Food</a></li>
+                <li><a href="order.html"><i class='bx bxs-cart'></i> Order</a></li>
+                <li><a href="book-table.html"><i class='bx bxs-calendar'></i> Book Table</a></li>
+            </ul>
+        </div>
+
+        <div class="panel">
+            <h3>Manage Table Bookings</h3>
+            
+            
+            <table class="booking-table">
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Number of Persons</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John Doe</td>
+            <td>(123) 456-7890</td>
+            <td>test@gmail.com</td>
+            <td>4</td>
+            <td>2024-08-20</td>
+            <td>19:00</td>
+            <td><span class="status booked">Booked</span></td>
+            <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Jane Smith</td>
+            <td>(098) 765-4321</td>
+            <td>test@gmail.com</td>
+            <td>2</td>
+            <td>2024-08-21</td>
+            <td>18:00</td>
+            <td><span class="status pending">Pending</span></td>
+            <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Michael Johnson</td>
+            <td>(555) 123-4567</td>
+            <td>test@gmail.com</td>
+            <td>3</td>
+            <td>2024-08-22</td>
+            <td>20:00</td>
+            <td><span class="status canceled">Canceled</span></td>
+            <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </tbody>
+</table>
+
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

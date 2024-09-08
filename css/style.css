@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #2c3e50;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fix the header */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.header-label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.logout {
+    background-color: #ff7f50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+    background-color: #e66a3f;
+}
+
+.under-header {
+    display: flex;
+    margin-top: 60px; /* Adjust for the fixed header height */
+}
+
+.nav {
+    background-color: #2c3e50;
+    width: 250px;
+    height: 100vh;
+    padding-top: 25px;
+    text-align: left; /* Changed alignment to the left */
+    position: fixed;
+    top: 60px;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    margin-bottom: 20px;
+    text-align: center; /* Keep profile centered */
+}
+
+.profile img {
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.profile-name {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.nav ul {
+    list-style: none;
+    padding-left: 20px; /* Indent the list items */
+    margin-top: 20px;
+}
+
+.nav ul li {
+    margin-bottom: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; /* Added left padding for better alignment */
+    transition: background-color 0.3s ease;
+}
+
+.nav a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.nav a:hover, .nav a.active{
+    background-color: #34495e;
+    color: #ff7f50;
+    border-radius: 4px;
+}
+
+.panel {
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    background-color: #fff;
+    min-height: calc(100vh - 80px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Ensure the panel content can scroll if needed */
+}
+
+/* card */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    width: calc(25% - 15px); /* Adjust width to fit 4 cards */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card i {
+    font-size: 40px;
+    color: #ff7f50;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* right side pabel*/
+.panel {
+    padding: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-category-btn {
+    background-color: #ff7f50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.add-category-btn:hover {
+    background-color: #e66a3f;
+}
+
+.category-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-table th, .category-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.category-table th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 600;
+}
+
+.category-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.edit-btn, .delete-btn {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* food table */
+.food-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.food-table th, .order-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.food-table th {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.food-table td{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.food-table tr{
+    font-size: 12px;
+}
+
+.food-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* order table */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-table th, .order-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-table th {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+}
+.order-table tr{
+    font-size: 10px;
+}
+
+.order-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* book table */ 
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-booking-btn {
+    background-color: #ff7f50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.add-booking-btn:hover {
+    background-color: #e66a3f;
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-table th, .booking-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.booking-table th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.booking-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.booking-table td {
+    font-size: 12px; /* Adjust the font size for table cells */
+}
+
+.edit-btn, .delete-btn {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    font-size: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.status {
+    font-weight: 600;
+    padding: 4px 8px;
+    font-size: 10px;
+    color: #fff;
+    display: inline-block;
+}
+
+.status.booked {
+    color: #28a745; /* Green */
+}
+
+.status.pending {
+    color: #ffc107; /* Yellow */
+}
+
+.status.canceled {
+    color: #dc3545; /* Red */
+}
+
+
+/* Modal Container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Close Button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Form Labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Form Inputs */
+input[type="text"],[type="file"],[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Adjusting the form layout */
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1 1 45%; /* 45% width, adjust as needed */
+    min-width: 200px; /* Minimum width for small screens */
+}
+
+.form-group.full-width {
+    flex: 1 1 100%; /* Full width for elements like textarea */
+}
+

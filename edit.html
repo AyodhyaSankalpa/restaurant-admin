@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Category</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="header">
+        <span class="header-label">Edit Category</span>
+        <button class="logout">Logout</button>
+    </div>
+
+    <div class="under-header">
+        <div class="nav">
+            <div class="profile">
+                <img src="profile.jpg" alt="Profile Picture">
+                <span class="profile-name">Admin</span>
+            </div>
+            <ul>
+                <li><a href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a></li>
+                <li><a href="category.html" class="active"><i class="fa fa-list"></i>Categories</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </div>
+
+        <div class="panel">
+            <h3>Edit Category</h3>
+            <form id="edit-category-form">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="category-name">Category Name:</label>
+                        <input type="text" id="category-name" name="category_name" value="Sample Category">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="active">Active:</label>
+                        <select id="active" name="active">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="4">Sample description...</textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to your JS file -->
+</body>
+</html>

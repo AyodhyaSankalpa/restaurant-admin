@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WowFood Admin</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+	<div class="header">
+		<label class="header-label">Welcome, Admin</label>
+		<button class="logout">Logout</button>
+	</div>
+
+	<div class="under-header">
+		<div class="nav">
+			<div class="profile">
+				<img src="images/customer2.jpg" alt="Admin Profile Picture">
+				<p class="profile-name">Admin Name</p>
+			</div>
+
+				<ul>
+				    <li><a href="index.html"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+				    <li><a href="category.html"><i class='bx bxs-category'></i> Category</a></li>
+				    
+				    <li>
+				        <a href="javascript:void(0);" onclick="toggleDropdown()"><i class='bx bxs-food-menu'></i> Food</a>
+				        <ul id="foodDropdown" style="display: none; padding-left: 20px;">
+				            <li><a href="add-food.html">Add Food</a></li>
+				            <li><a href="manage-food.html">Manage Food</a></li>
+				            <li><a href="food-report.html">Food Report</a></li>
+				        </ul>
+				    </li>
+				    
+				    <li><a href="order.html"><i class='bx bxs-cart'></i> Order</a></li>
+				    <li><a href="book-table.html"><i class='bx bxs-calendar'></i> Book Table</a></li>
+				</ul>
+				
+		</div>
+		<div class="panel">
+
+		    <div class="card-container">
+		        <div class="card">
+		            <i class='bx bxs-category'></i>
+		            <h3>Category</h3>
+		            <p>1500</p>
+		        </div>
+		        <div class="card">
+		            <i class='bx bxs-food-menu'></i>
+		            <h3>Food</h3>
+		            <p>200</p>
+		        </div>
+		        <div class="card">
+		            <i class='bx bxs-cart'></i>
+		            <h3>Total Order</h3>
+		            <p>45</p>
+		        </div>
+		        <div class="card">
+		            <i class='bx bxs-calendar'></i>
+		            <h3>Total booking</h3>
+		            <p>120</p>
+		        </div>
+		    </div>
+		</div>
+
+	</div>
+
+
+
+<script src="js/admin.js"></script>
+</body>
+</html>

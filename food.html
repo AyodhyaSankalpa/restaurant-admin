@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WowFood Admin</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+	<div class="header">
+		<label class="header-label">Welcome, Admin</label>
+		<button class="logout">Logout</button>
+	</div>
+
+	<div class="under-header">
+		<div class="nav">
+			<div class="profile">
+				<img src="images/customer2.jpg" alt="Admin Profile Picture">
+				<p class="profile-name">Admin Name</p>
+			</div>
+			<ul>
+				<li><a href="index.html"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+				<li><a href="category.html"><i class='bx bxs-category'></i> Category</a></li>
+				<li><a href="food.html"><i class='bx bxs-food-menu'></i> Food</a></li>
+				<li><a href="order.html"><i class='bx bxs-cart'></i> Order</a></li>
+				<li><a href="book-table.html"><i class='bx bxs-calendar'></i> Book Table</a></li>
+			</ul>
+		</div>
+		<div class="panel">
+			    <h3>Manage Food</h3>
+			    
+			    <button class="add-category-btn" onclick="openForm()">Add Food</button>
+
+			    <!-- Add  Form Modal -->
+				<div id="addFormModal" class="modal">
+				    <div class="modal-content">
+				        <span class="close-btn" onclick="closeForm()">&times;</span>
+				        <h3>Add New Food</h3>
+				        <form id="addFoodForm" class="form-container">
+				            <div class="form-group">
+				                <label for="foodName">Food Name:</label>
+				                <input type="text" id="foodName" name="foodName" required>
+				            </div>
+				            <div class="form-group">
+				                <label for="foodCategory">Category:</label>
+				                <select id="categoryName" name="categoryName">
+				                	<option>Rice</option>
+				                	<option>Curry</option>
+				                	<option>Juice</option>
+				                </select>
+				            </div>
+				            <div class="form-group">
+				                <label for="foodDescription">Food Description:</label>
+				                <textarea id="foodDescription" name="foodDescription"></textarea>
+				            </div>
+				            <div class="form-group">
+				                <label for="foodDescription">Price:</label>
+				                <input type="number" id="foodPrice" name="foodPrice" required>
+				            </div>
+				            <div class="form-group">
+				                <label for="foodImage">Image:</label>
+				                <input type="file" id="foodImage" name="foodImage" required>
+				            </div>
+				            <div class="form-group">
+				                <label for="isActive">Active:</label>
+				                <select id="isActive" name="isActive">
+				                    <option value="Yes">Yes</option>
+				                    <option value="No">No</option>
+				                </select>
+				            </div>
+				            <button type="submit" class="submit-btn">Add Food</button>
+				        </form>
+				    </div>
+				</div>
+			    
+			    <table class="food-table">
+			        <thead>
+			            <tr>
+			                <th>Food Name</th>
+			                <th>Image</th>
+			                <th>Category</th>
+			                <th>Description</th>
+			                <th>Price</th>
+			                <th>Active</th>
+			                <th>Action</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			            <tr>
+			                <td>Rice</td>
+			                <td><img width="100px" src="images/1.png"></td>
+			                <td>Rice</td>
+			                <td>Lorem ipsum dolor sit amet, consectetur adipi</td>
+			                <td>$ 4.00</td>
+			                <td>Yes</td>
+			                <td>
+			                    <button class="edit-btn">Edit</button>
+			                    <button class="delete-btn">Delete</button>
+			                </td>
+			            </tr>
+			           <tr>
+			                <td>Rice</td>
+			                <td><img width="100px" src="images/2.png"></td>
+			                <td>Rice</td>
+			                <td>Lorem ipsum dolor sit amet, consectetur adipi</td>
+			                <td>$ 4.00</td>
+			                <td>Yes</td>
+			                <td>
+			                    <button class="edit-btn">Edit</button>
+			                    <button class="delete-btn">Delete</button>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>Rice</td>
+			                <td><img width="100px" src="images/7.png"></td>
+			                <td>Rice</td>
+			                <td>Lorem ipsum dolor sit amet, consectetur adipi</td>
+			                <td>$ 4.00</td>
+			                <td>Yes</td>
+			                <td>
+			                    <button class="edit-btn">Edit</button>
+			                    <button class="delete-btn">Delete</button>
+			                </td>
+			            </tr>
+			            <!-- Add more rows as needed -->
+			        </tbody>
+			    </table>
+			</div>
+
+	</div>
+
+
+
+<script src="js/admin.js"></script>
+</body>
+</html>
